@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:right_saudi/pages/login_screen/componant/background.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:right_saudi/pages/login_screen/componant/textfield.dart';
+import 'package:right_saudi/pages/login_screen/componant/rounded_input.dart';
 
 class body extends StatelessWidget {
   const body({
@@ -23,7 +24,16 @@ class body extends StatelessWidget {
           "assets/login.svg",
           height: size.height * 0.35,
         ),
-        textfieldcontainer(child: TextField()),
+        roundedinput(
+          hintText: "write your email",
+          icon: Icons.person,
+          onchanged: (value) {},
+        ),
+        roundedinput(
+          hintText: "write your email",
+          icon: Icons.password,
+          onchanged: (value) {},
+        ),
       ],
     ));
   }
