@@ -29,12 +29,29 @@ class body extends StatelessWidget {
           icon: Icons.person,
           onchanged: (value) {},
         ),
-        roundedinput(
-          hintText: "write your email",
-          icon: Icons.password,
-          onchanged: (value) {},
-        ),
+        roundedpassword(),
       ],
     ));
+  }
+}
+
+class roundedpassword extends StatelessWidget {
+  const roundedpassword({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return textfieldcontainer(
+        child: TextField(
+            obscureText: true,
+            decoration: InputDecoration(
+                hintText: "password",
+                border: InputBorder.none,
+                icon: Icon(Icons.lock),
+                suffixIcon: Icon(
+                  Icons.visibility,
+                  color: Colors.green,
+                ))));
   }
 }
