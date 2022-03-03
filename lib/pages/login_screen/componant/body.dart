@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:right_saudi/pages/componant/rounded_button.dart';
 import 'package:right_saudi/pages/login_screen/componant/background.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:right_saudi/pages/login_screen/componant/textfield.dart';
 import 'package:right_saudi/pages/login_screen/componant/rounded_input.dart';
+import 'package:right_saudi/pages/login_screen/componant/rounded_password.dart';
 
 class body extends StatelessWidget {
   const body({
@@ -29,29 +31,11 @@ class body extends StatelessWidget {
           icon: Icons.person,
           onchanged: (value) {},
         ),
-        roundedpassword(),
+        roundedpassword(
+          onchanged: (value) {},
+        ),
+        roundedbutton(text: 'Login'),
       ],
     ));
-  }
-}
-
-class roundedpassword extends StatelessWidget {
-  const roundedpassword({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return textfieldcontainer(
-        child: TextField(
-            obscureText: true,
-            decoration: InputDecoration(
-                hintText: "password",
-                border: InputBorder.none,
-                icon: Icon(Icons.lock),
-                suffixIcon: Icon(
-                  Icons.visibility,
-                  color: Colors.green,
-                ))));
   }
 }
