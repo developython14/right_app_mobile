@@ -20,20 +20,20 @@ class body extends StatelessWidget {
             ),
             SizedBox(height: size.height * 0.03),
             SvgPicture.asset(
-              'assets/start.svg',
+              'assets/chat.svg',
               height: size.height * 0.45,
             ),
             SizedBox(height: size.height * 0.03),
             roundedbutton(
               text: "login",
-              color: Color.fromARGB(255, 226, 136, 129),
-              textcolor: Colors.green,
+              color: Color.fromARGB(255, 111, 25, 248),
+              textcolor: Colors.white,
               press: () {},
             ),
             roundedbutton(
               text: "signup",
-              color: Color.fromARGB(255, 105, 43, 38),
-              textcolor: Color.fromARGB(255, 218, 8, 172),
+              color: Color.fromARGB(255, 196, 236, 255),
+              textcolor: Colors.black,
               press: () {},
             )
           ]),

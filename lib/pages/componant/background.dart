@@ -18,14 +18,14 @@ class background extends StatelessWidget {
             top: 0,
             left: 0,
             child: Image.asset(
-              "assets/1.png",
+              "assets/0.png",
               width: size.width * 0.3,
             )),
         Positioned(
             left: 0,
             bottom: 0,
             child: Image.asset(
-              "assets/0.png",
+              "assets/1.png",
               width: size.width * 0.2,
             )),
         child
