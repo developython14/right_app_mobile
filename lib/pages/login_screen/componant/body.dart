@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:right_saudi/pages/login_screen/componant/background.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:right_saudi/pages/login_screen/componant/textfield.dart';
 
 class body extends StatelessWidget {
   const body({
@@ -21,7 +22,8 @@ class body extends StatelessWidget {
         SvgPicture.asset(
           "assets/login.svg",
           height: size.height * 0.35,
-        )
+        ),
+        textfieldcontainer(child: TextField()),
       ],
     ));
   }
