@@ -18,10 +18,15 @@ class body extends StatelessWidget {
               "welcome to right plateforme",
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            SvgPicture.asset('assets/start.svg'),
+            SizedBox(height: size.height * 0.03),
+            SvgPicture.asset(
+              'assets/start.svg',
+              height: size.height * 0.45,
+            ),
+            SizedBox(height: size.height * 0.03),
             roundedbutton(
               text: "login",
-              color: Colors.red,
+              color: Color.fromARGB(255, 226, 136, 129),
               textcolor: Colors.green,
               press: () {},
             ),
