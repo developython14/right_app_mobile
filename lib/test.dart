@@ -7,11 +7,11 @@ class drme extends StatefulWidget {
   State<drme> createState() => _drmeState();
 }
 
+
 class _drmeState extends State<drme> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Center(child: Text("allo mustapha")),
         drawer: Drawer(
           // Add a ListView to the drawer. This ensures the user can scroll
           // through the options in the drawer if there isn't enough vertical
@@ -37,6 +37,7 @@ class _drmeState extends State<drme> {
                 title: const Text('Item 2'),
                 onTap: () {
                   Navigator.pop(context);
+                  print("you can do it mustapha")
                   // Update the state of the app.
                   // ...
                 },
