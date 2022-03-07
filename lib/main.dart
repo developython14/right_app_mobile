@@ -5,9 +5,10 @@ import 'package:right_saudi/test.dart';
 
 void main() {
   runApp(
-      MaterialApp(title: 'mustapha belkassem ', initialRoute: '/test', routes: {
+      MaterialApp(title: 'mustapha belkassem ', initialRoute: '/me', routes: {
     '/': (context) => const welecome(),
     '/mus': (context) => const login_screen(),
     '/test': (context) => const MyStatefulWidget(),
+    '/me': (context) => const drme(),
   }));
 }
