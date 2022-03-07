@@ -8,7 +8,6 @@ void main() {
       MaterialApp(title: 'mustapha belkassem ', initialRoute: '/me', routes: {
     '/': (context) => const welecome(),
     '/mus': (context) => const login_screen(),
-    '/test': (context) => const MyStatefulWidget(),
     '/me': (context) => const drme(),
   }));
 }
