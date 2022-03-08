@@ -24,7 +24,7 @@ class homescreen extends StatelessWidget {
             children: [
               Container(
                 child: Image.asset(
-                  'assets/0.jpg',
+                  'assets/0.png',
                   width: 30,
                 ),
               )
