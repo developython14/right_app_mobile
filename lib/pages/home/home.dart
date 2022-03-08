@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:right_saudi/pages/componant/c_home.dart';
+import 'package:right_saudi/pages/login_screen/componant/rounded_password.dart';
 
 const Color back = Colors.grey;
 const Color front = Colors.white;
@@ -57,9 +58,7 @@ class homescreen extends StatelessWidget {
         child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              emoji_text(),
-            ]),
+            children: [emoji_text(), searchbar()]),
       ),
     );
   }
