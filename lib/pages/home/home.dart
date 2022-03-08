@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+const Color back = Colors.grey;
+const Color front = Colors.white;
+
 class homescreen extends StatelessWidget {
   const homescreen({Key? key}) : super(key: key);
 
@@ -7,14 +10,16 @@ class homescreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 212, 223, 233),
+        automaticallyImplyLeading: false,
+        elevation: 0,
+        backgroundColor: back,
         centerTitle: false,
         title: Padding(
           padding: const EdgeInsets.only(left: 10),
           child: Text(
             'Hello mustapha !!',
             style: TextStyle(
-              color: Color.fromARGB(255, 255, 62, 245),
+              color: front,
               fontSize: 16,
             ),
           ),
@@ -25,10 +30,14 @@ class homescreen extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(top: 10, right: 20),
                 padding: EdgeInsets.all(8),
-                child: Image.asset(
-                  'assets/0.png',
-                  width: 30,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                      color:
+                          Color.fromARGB(255, 246, 255, 246).withOpacity(0.3),
+                      width: 2),
+                  borderRadius: BorderRadius.circular(15),
                 ),
+                child: Icon(Icons.notifications),
               ),
               Positioned(
                   top: 15,
@@ -37,7 +46,8 @@ class homescreen extends StatelessWidget {
                       height: 8,
                       width: 8,
                       decoration: BoxDecoration(
-                          color: Colors.red, shape: BoxShape.circle)))
+                          color: Color.fromARGB(255, 219, 210, 209),
+                          shape: BoxShape.circle)))
             ],
           )
         ],
