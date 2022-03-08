@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:right_saudi/pages/componant/c_home.dart';
 
 const Color back = Colors.grey;
 const Color front = Colors.white;
@@ -51,6 +52,14 @@ class homescreen extends StatelessWidget {
             ],
           )
         ],
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              emoji_text(),
+            ]),
       ),
     );
   }
