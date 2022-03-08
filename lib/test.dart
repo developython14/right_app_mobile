@@ -142,7 +142,7 @@ class _MyHeaderDrawerState extends State<MyHeaderDrawer> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.green[700],
+      color: Color.fromARGB(255, 12, 55, 243),
       width: double.infinity,
       height: 200,
       padding: EdgeInsets.only(top: 20.0),
@@ -160,11 +160,11 @@ class _MyHeaderDrawerState extends State<MyHeaderDrawer> {
             ),
           ),
           Text(
-            "Rapid Tech",
+            "Belkassem Mustapha",
             style: TextStyle(color: Colors.white, fontSize: 20),
           ),
           Text(
-            "info@rapidtech.dev",
+            "khasarou@gmail.com",
             style: TextStyle(
               color: Colors.grey[200],
               fontSize: 14,
