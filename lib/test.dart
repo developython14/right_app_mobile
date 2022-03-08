@@ -12,36 +12,37 @@ class _drmeState extends State<drme> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Drawer Demo'),
+        title: const Text('right Edu'),
       ),
       body: MyStatefulWidget(),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
-          children: const <Widget>[
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-              child: Text(
-                'Drawer Header',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                ),
-              ),
+          children: <Widget>[
+            MyHeaderDrawer(),
+            ListTile(
+              leading: Icon(Icons.account_circle),
+              title: Text('Profile'),
+            ),
+            ListTile(
+              leading: Icon(Icons.notifications),
+              title: Text('notifications'),
             ),
             ListTile(
               leading: Icon(Icons.message),
               title: Text('Messages'),
             ),
             ListTile(
-              leading: Icon(Icons.account_circle),
-              title: Text('Profile'),
+              leading: Icon(Icons.history),
+              title: Text('hisorique'),
             ),
             ListTile(
               leading: Icon(Icons.settings),
               title: Text('Settings'),
+            ),
+            ListTile(
+              leading: Icon(Icons.logout),
+              title: Text('logout'),
             ),
           ],
         ),
@@ -63,19 +64,23 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     Text(
-      'Index 0: Home',
+      'Index 0: search',
       style: optionStyle,
     ),
     Text(
-      'Index 1: Business',
+      'Index 1: notification',
       style: optionStyle,
     ),
     Text(
-      'Index 2: School',
+      'Index 2: home page',
       style: optionStyle,
     ),
     Text(
-      'Index 3: Settings',
+      'Index 3: profile',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 3: services',
       style: optionStyle,
     ),
   ];
@@ -89,38 +94,83 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('BottomNavigationBar Sample'),
-      ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon: Icon(Icons.search),
+            label: 'search',
             backgroundColor: Colors.red,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
-            backgroundColor: Colors.green,
+            icon: Icon(Icons.notifications),
+            label: 'notifications',
+            backgroundColor: Color.fromARGB(255, 41, 189, 41),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
+            icon: Icon(Icons.home),
+            label: 'home',
             backgroundColor: Colors.purple,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
+            icon: Icon(Icons.person),
+            label: 'profile',
+            backgroundColor: Colors.pink,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.list),
+            label: 'services',
             backgroundColor: Colors.pink,
           ),
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[800],
         onTap: _onItemTapped,
+      ),
+    );
+  }
+}
+
+class MyHeaderDrawer extends StatefulWidget {
+  @override
+  _MyHeaderDrawerState createState() => _MyHeaderDrawerState();
+}
+
+class _MyHeaderDrawerState extends State<MyHeaderDrawer> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.green[700],
+      width: double.infinity,
+      height: 200,
+      padding: EdgeInsets.only(top: 20.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            margin: EdgeInsets.only(bottom: 10),
+            height: 70,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              image: DecorationImage(
+                image: AssetImage('assets/mustapha.jpg'),
+              ),
+            ),
+          ),
+          Text(
+            "Rapid Tech",
+            style: TextStyle(color: Colors.white, fontSize: 20),
+          ),
+          Text(
+            "info@rapidtech.dev",
+            style: TextStyle(
+              color: Colors.grey[200],
+              fontSize: 14,
+            ),
+          ),
+        ],
       ),
     );
   }
