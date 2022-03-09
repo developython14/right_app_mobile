@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:right_saudi/pages/componant/c_home.dart';
 import 'package:right_saudi/pages/login_screen/componant/rounded_password.dart';
+import 'package:right_saudi/pages/componant/services_item.dart';
+import 'package:right_saudi/pages/componant/service_model.dart';
+
+
+
 
 const Color back = Colors.grey;
 const Color front = Colors.white;
@@ -64,7 +69,8 @@ class homescreen extends StatelessWidget {
               categorytitle(
                 lefttext: "topservices",
                 righttext: "view all",
-              )
+              ),
+              servicesitem(Service('mustapha services', 'bla bla bla bla ', 'assers/0.png'))
             ]),
       ),
     );

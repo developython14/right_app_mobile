@@ -36,18 +36,18 @@ class searchbar extends StatelessWidget {
         margin: EdgeInsets.all(25),
         decoration: BoxDecoration(
             border:
-                Border.all(color: Color.fromARGB(255, 119, 18, 0), width: 2),
+                Border.all(color: Color.fromARGB(255, 155, 154, 154), width: 2),
             borderRadius: BorderRadius.circular(20)),
         child: TextField(
             cursorColor: front,
             decoration: InputDecoration(
-                fillColor: Colors.white.withOpacity(0.3),
+                fillColor: Color.fromARGB(255, 255, 255, 255).withOpacity(0.3),
                 filled: true,
                 border: InputBorder.none,
                 hintText: 'search for services experts blogs....',
                 suffixIcon: Icon(
                   Icons.search,
-                  color: Color.fromARGB(255, 46, 8, 8),
+                  color: Color.fromARGB(255, 167, 87, 87),
                 ),
                 contentPadding: EdgeInsets.all(18))),
       ),
