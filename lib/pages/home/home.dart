@@ -8,7 +8,8 @@ const Color back = Colors.grey;
 const Color front = Colors.white;
 
 class homescreen extends StatelessWidget {
-  const homescreen({Key? key}) : super(key: key);
+  final List listservices = Service.generateservices();
+  homescreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -67,8 +68,21 @@ class homescreen extends StatelessWidget {
                 lefttext: "topservices",
                 righttext: "view all",
               ),
-              servicesitem(Service(
-                  'mustapha services', 'bla bla bla bla ', 'assers/0.png'))
+              Column(
+                children: [
+                  Container(
+                      height: 300,
+                      child: ListView.separated(
+                          separatorBuilder: (BuildContext context, int index) =>
+                              SizedBox(
+                                width: 10,
+                              ),
+                          scrollDirection: Axis.horizontal,
+                          itemCount: listservices.length,
+                          itemBuilder: (context, index) =>
+                              servicesitem(listservices[index])))
+                ],
+              )
             ]),
       ),
     );

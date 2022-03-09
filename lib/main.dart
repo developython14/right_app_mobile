@@ -10,6 +10,6 @@ void main() {
     '/': (context) => const welecome(),
     '/mus': (context) => const login_screen(),
     '/me': (context) => const drme(),
-    '/home': (context) => const homescreen(),
+    '/home': (context) => homescreen(),
   }));
 }

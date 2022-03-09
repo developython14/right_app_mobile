@@ -7,7 +7,18 @@ class Service {
 
   static List<Service> generateservices() {
     return [
-      Service('mustapha services', 'just we can do it  ', 'assers/0.png'),
+      Service(
+          'mustapha services', 'just we can do it  ', 'assers/mustapha.jpg'),
+      Service(
+          'mustapha services', 'just we can do it  ', 'assers/mustapha.jpg'),
+      Service(
+          'mustapha services', 'just we can do it  ', 'assers/mustapha.jpg'),
+      Service(
+          'mustapha services', 'just we can do it  ', 'assers/mustapha.jpg'),
+      Service(
+          'mustapha services', 'just we can do it  ', 'assers/mustapha.jpg'),
+      Service(
+          'mustapha services', 'just we can do it  ', 'assers/mustapha.jpg'),
     ];
   }
 }

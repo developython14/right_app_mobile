@@ -25,7 +25,7 @@ class servicesitem extends StatelessWidget {
                     topLeft: Radius.circular(25),
                     topRight: Radius.circular(25)),
                 child: Image.asset(
-                  'assets/paul.jpg',
+                  service.imageurl,
                   fit: BoxFit.cover,
                 ),
               ),
@@ -47,7 +47,7 @@ class servicesitem extends StatelessWidget {
                               width: 5,
                             ),
                             Text(
-                              'write pfe me',
+                              service.title,
                               style: TextStyle(fontWeight: FontWeight.bold),
                             )
                           ],
