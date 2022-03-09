@@ -68,7 +68,17 @@ class categorytitle extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 25),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [Text(lefttext), Text(righttext)],
+        children: [
+          Text(
+            lefttext,
+            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          ),
+          Text(
+            righttext,
+            style:
+                TextStyle(fontSize: 15, color: Color.fromARGB(255, 77, 77, 77)),
+          )
+        ],
       ),
     );
   }
