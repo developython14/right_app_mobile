@@ -36,21 +36,40 @@ class searchbar extends StatelessWidget {
         margin: EdgeInsets.all(25),
         decoration: BoxDecoration(
             border:
-                Border.all(color: Color.fromARGB(255, 151, 145, 144), width: 2),
-            borderRadius: BorderRadius.circular(25)),
+                Border.all(color: Color.fromARGB(255, 119, 18, 0), width: 2),
+            borderRadius: BorderRadius.circular(20)),
         child: TextField(
             cursorColor: front,
             decoration: InputDecoration(
-                fillColor: front.withOpacity(0.3),
+                fillColor: Colors.white.withOpacity(0.3),
                 filled: true,
                 border: InputBorder.none,
                 hintText: 'search for services experts blogs....',
                 suffixIcon: Icon(
                   Icons.search,
-                  color: Color.fromARGB(255, 218, 236, 219),
+                  color: Color.fromARGB(255, 46, 8, 8),
                 ),
                 contentPadding: EdgeInsets.all(18))),
       ),
     ]));
+  }
+}
+
+class categorytitle extends StatelessWidget {
+  final String lefttext;
+  final String righttext;
+  const categorytitle(
+      {Key? key, required this.lefttext, required this.righttext})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 25),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [Text(lefttext), Text(righttext)],
+      ),
+    );
   }
 }

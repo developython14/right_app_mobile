@@ -58,7 +58,14 @@ class homescreen extends StatelessWidget {
         child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [emoji_text(), searchbar()]),
+            children: [
+              emoji_text(),
+              searchbar(),
+              categorytitle(
+                lefttext: "topservices",
+                righttext: "view all",
+              )
+            ]),
       ),
     );
   }
