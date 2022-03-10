@@ -3,6 +3,7 @@ import 'package:right_saudi/pages/componant/c_home.dart';
 import 'package:right_saudi/pages/login_screen/componant/rounded_password.dart';
 import 'package:right_saudi/pages/componant/services_item.dart';
 import 'package:right_saudi/pages/componant/service_model.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 const Color back = Colors.grey;
 const Color front = Colors.white;
@@ -95,6 +96,30 @@ class homescreen extends StatelessWidget {
             children: [
               emoji_text(),
               searchbar(),
+              CarouselSlider(
+                options: CarouselOptions(
+                  height: 300.0,
+                  autoPlay: true,
+                  autoPlayInterval: Duration(seconds: 3),
+                  autoPlayAnimationDuration: Duration(milliseconds: 800),
+                  autoPlayCurve: Curves.fastOutSlowIn,
+                ),
+                items: [1, 2, 3, 4, 5].map((i) {
+                  return Builder(
+                    builder: (BuildContext context) {
+                      return Container(
+                          width: MediaQuery.of(context).size.width,
+                          margin: EdgeInsets.symmetric(horizontal: 5.0),
+                          decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 216, 216, 216)),
+                          child: Image.asset(
+                            'assets/mustapha.jpg',
+                            fit: BoxFit.cover,
+                          ));
+                    },
+                  );
+                }).toList(),
+              ),
               categorytitle(
                 lefttext: "topservices",
                 righttext: "view all",
