@@ -57,6 +57,37 @@ class homescreen extends StatelessWidget {
           )
         ],
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: 'search',
+            backgroundColor: Colors.red,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.notifications),
+            label: 'notifications',
+            backgroundColor: Color.fromARGB(255, 41, 189, 41),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'home',
+            backgroundColor: Colors.purple,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'profile',
+            backgroundColor: Colors.pink,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.list),
+            label: 'services',
+            backgroundColor: Colors.pink,
+          ),
+        ],
+        currentIndex: 0,
+        selectedItemColor: Colors.amber[800],
+      ),
       body: SingleChildScrollView(
         child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -68,21 +99,48 @@ class homescreen extends StatelessWidget {
                 lefttext: "topservices",
                 righttext: "view all",
               ),
-              Column(
-                children: [
-                  Container(
-                      height: 300,
-                      child: ListView.separated(
-                          separatorBuilder: (BuildContext context, int index) =>
-                              SizedBox(
-                                width: 10,
-                              ),
-                          scrollDirection: Axis.horizontal,
-                          itemCount: listservices.length,
-                          itemBuilder: (context, index) =>
-                              servicesitem(listservices[index])))
-                ],
-              )
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Column(
+                  children: [
+                    Container(
+                        height: 300,
+                        child: ListView.separated(
+                            padding: EdgeInsets.all(25),
+                            separatorBuilder:
+                                (BuildContext context, int index) => SizedBox(
+                                      width: 10,
+                                    ),
+                            scrollDirection: Axis.horizontal,
+                            itemCount: listservices.length,
+                            itemBuilder: (context, index) =>
+                                servicesitem(listservices[index])))
+                  ],
+                ),
+              ),
+              categorytitle(
+                lefttext: "top blogs",
+                righttext: "view all",
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Column(
+                  children: [
+                    Container(
+                        height: 300,
+                        child: ListView.separated(
+                            padding: EdgeInsets.all(25),
+                            separatorBuilder:
+                                (BuildContext context, int index) => SizedBox(
+                                      width: 10,
+                                    ),
+                            scrollDirection: Axis.horizontal,
+                            itemCount: listservices.length,
+                            itemBuilder: (context, index) =>
+                                servicesitem(listservices[index])))
+                  ],
+                ),
+              ),
             ]),
       ),
     );

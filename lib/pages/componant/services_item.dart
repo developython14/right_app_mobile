@@ -15,7 +15,7 @@ class servicesitem extends StatelessWidget {
           height: 250,
           width: 250,
           decoration: BoxDecoration(
-              color: Color.fromARGB(255, 189, 209, 190),
+              color: Color.fromARGB(255, 124, 126, 125),
               borderRadius: BorderRadius.circular(25)),
           child: Column(children: [
             Expanded(
@@ -70,7 +70,7 @@ class servicesitem extends StatelessWidget {
             bottom: 60,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                  primary: Color.fromARGB(255, 155, 8, 192),
+                  primary: Color.fromARGB(255, 34, 247, 165),
                   elevation: 0,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15))),
