@@ -11,10 +11,6 @@ class _drmeState extends State<drme> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('right Edu'),
-      ),
-      body: MyStatefulWidget(),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -142,7 +138,7 @@ class _MyHeaderDrawerState extends State<MyHeaderDrawer> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color.fromARGB(255, 12, 55, 243),
+      color: Color.fromARGB(255, 151, 151, 151),
       width: double.infinity,
       height: 200,
       padding: EdgeInsets.only(top: 20.0),

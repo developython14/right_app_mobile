@@ -4,6 +4,7 @@ import 'package:right_saudi/pages/login_screen/componant/rounded_password.dart';
 import 'package:right_saudi/pages/componant/services_item.dart';
 import 'package:right_saudi/pages/componant/service_model.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:right_saudi/test.dart';
 
 const Color back = Colors.grey;
 const Color front = Colors.white;
@@ -24,7 +25,6 @@ class homescreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
         elevation: 0,
         backgroundColor: back,
         centerTitle: false,
@@ -66,36 +66,37 @@ class homescreen extends StatelessWidget {
           )
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'search',
-            backgroundColor: Colors.red,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.notifications),
-            label: 'notifications',
-            backgroundColor: Color.fromARGB(255, 41, 189, 41),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'home',
-            backgroundColor: Colors.purple,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'profile',
-            backgroundColor: Colors.pink,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.list),
-            label: 'services',
-            backgroundColor: Colors.pink,
-          ),
-        ],
-        currentIndex: 0,
-        selectedItemColor: Colors.amber[800],
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            MyHeaderDrawer(),
+            ListTile(
+              leading: Icon(Icons.account_circle),
+              title: Text('Profile'),
+            ),
+            ListTile(
+              leading: Icon(Icons.notifications),
+              title: Text('notifications'),
+            ),
+            ListTile(
+              leading: Icon(Icons.message),
+              title: Text('Messages'),
+            ),
+            ListTile(
+              leading: Icon(Icons.history),
+              title: Text('hisorique'),
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('Settings'),
+            ),
+            ListTile(
+              leading: Icon(Icons.logout),
+              title: Text('logout'),
+            ),
+          ],
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -104,28 +105,32 @@ class homescreen extends StatelessWidget {
             children: [
               emoji_text(),
               searchbar(),
-              CarouselSlider(
-                options: CarouselOptions(
-                  height: 300.0,
-                  autoPlay: true,
-                  autoPlayInterval: Duration(seconds: 3),
-                  autoPlayAnimationDuration: Duration(milliseconds: 800),
-                  autoPlayCurve: Curves.fastOutSlowIn,
+              Container(
+                margin: EdgeInsets.only(top: 25, bottom: 25),
+                child: CarouselSlider(
+                  options: CarouselOptions(
+                    height: 300.0,
+                    autoPlay: true,
+                    autoPlayInterval: Duration(seconds: 3),
+                    autoPlayAnimationDuration: Duration(milliseconds: 800),
+                    autoPlayCurve: Curves.fastOutSlowIn,
+                  ),
+                  items: [1, 2, 3, 4, 5].map((i) {
+                    return Builder(
+                      builder: (BuildContext context) {
+                        return Container(
+                            width: MediaQuery.of(context).size.width,
+                            margin: EdgeInsets.symmetric(horizontal: 5.0),
+                            decoration: BoxDecoration(
+                                color: Color.fromARGB(255, 216, 216, 216)),
+                            child: Image.network(
+                              imgList[i],
+                              fit: BoxFit.cover,
+                            ));
+                      },
+                    );
+                  }).toList(),
                 ),
-                items: [1, 2, 3, 4, 5].map((i) {
-                  return Builder(
-                    builder: (BuildContext context) {
-                      return Container(
-                          width: MediaQuery.of(context).size.width,
-                          margin: EdgeInsets.symmetric(horizontal: 5.0),
-                          decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 216, 216, 216)),
-                          child: Image.network(imgList[],
-                            fit: BoxFit.cover,
-                          ));
-                    },
-                  );
-                }).toList(),
               ),
               categorytitle(
                 lefttext: "topservices",
