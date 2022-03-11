@@ -6,11 +6,14 @@ import 'package:right_saudi/pages/home/home.dart';
 import 'package:right_saudi/pages/signup/signup.dart';
 
 void main() {
-  runApp(MaterialApp(title: 'mustapha belkassem ', initialRoute: '/', routes: {
-    '/': (context) => const welecome(),
-    '/mus': (context) => const login_screen(),
-    '/me': (context) => const drme(),
-    '/home': (context) => homescreen(),
-    '/signup': (context) => signup(),
-  }));
+  runApp(MaterialApp(
+      title: 'mustapha belkassem ',
+      initialRoute: '/signup',
+      routes: {
+        '/': (context) => const welecome(),
+        '/mus': (context) => const login_screen(),
+        '/me': (context) => const drme(),
+        '/home': (context) => homescreen(),
+        '/signup': (context) => signup(),
+      }));
 }
