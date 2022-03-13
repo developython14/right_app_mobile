@@ -34,6 +34,7 @@ class MyCustomFormState extends State<MyCustomForm> {
   // not a GlobalKey<MyCustomFormState>.
   final _formKey = GlobalKey<FormState>();
   final myController = TextEditingController();
+  final myController1 = TextEditingController();
 
   @override
   void initState() {
@@ -55,6 +56,8 @@ class MyCustomFormState extends State<MyCustomForm> {
     print('Second text field: ${myController.text}');
   }
 
+  String? gender;
+  var items = [1, 2, 3, 'hacke me '];
   @override
   Widget build(BuildContext context) {
     // Build a Form widget using the _formKey created above.
@@ -75,9 +78,43 @@ class MyCustomFormState extends State<MyCustomForm> {
               return null;
             },
           ),
+          FlatButton(
+              onPressed: () {
+                var name = myController.text;
+                var surname = myController1.text;
+                print('name is $name and surname is $surname');
+                print('gender is $gender');
+              },
+              child: Text('on submit')),
           TextField(
             controller: myController,
           ),
+          TextField(
+            controller: myController1,
+          ),
+          ListTile(
+            title: Text("Male"),
+            leading: Radio(
+                value: "male",
+                groupValue: gender,
+                onChanged: (value) {
+                  setState(() {
+                    gender = value.toString();
+                  });
+                }),
+          ),
+          ListTile(
+            title: Text("female"),
+            leading: Radio(
+                value: "female",
+                groupValue: gender,
+                onChanged: (value) {
+                  setState(() {
+                    gender = value.toString();
+                  });
+                }),
+          ),
+          DropdownButton(items: items, onChanged: () {})
         ],
       ),
     );
