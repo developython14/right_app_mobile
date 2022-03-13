@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 class signup extends StatelessWidget {
@@ -57,7 +59,7 @@ class MyCustomFormState extends State<MyCustomForm> {
   }
 
   String? gender;
-  var items = [1, 2, 3, 'hacke me '];
+  String dropdownValue = 'One';
   @override
   Widget build(BuildContext context) {
     // Build a Form widget using the _formKey created above.
@@ -114,7 +116,49 @@ class MyCustomFormState extends State<MyCustomForm> {
                   });
                 }),
           ),
-          DropdownButton(items: items, onChanged: () {})
+          ListTile(
+            title: TextField(
+              controller: myController1,
+            ),
+            leading: Text("name"),
+          ),
+          Container(
+            child: Row(
+              children: [
+                Text("name"),
+                TextField(
+                  controller: myController1,
+                ),
+              ],
+            ),
+          ),
+          ListTile(
+            title: Container(
+                width: 250,
+                child: DropdownButton<String>(
+                  value: dropdownValue,
+                  icon: const Icon(Icons.arrow_downward),
+                  elevation: 16,
+                  style: const TextStyle(color: Colors.deepPurple),
+                  underline: Container(
+                    height: 2,
+                    color: Colors.deepPurpleAccent,
+                  ),
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      dropdownValue = newValue!;
+                    });
+                  },
+                  items: <String>['One', 'Two', 'Free', 'Four']
+                      .map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
+                )),
+            leading: Text("'data'"),
+          ),
         ],
       ),
     );
