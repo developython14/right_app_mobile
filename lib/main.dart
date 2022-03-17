@@ -15,7 +15,6 @@ void main() {
         '/mus': (context) => const login_screen(),
         '/me': (context) => const drme(),
         '/home': (context) => homescreen(),
-        '/signup': (context) => signup(),
-        '/mustapha': (context) => mydesign(),
+        '/mustapha': (context) => MyCustomForm(),
       }));
 }

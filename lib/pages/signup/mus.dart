@@ -1,41 +1,37 @@
 import 'package:flutter/material.dart';
 
-class mydesign extends StatelessWidget {
-  const mydesign({Key? key}) : super(key: key);
+// Define a custom Form widget.
+class MyCustomForm extends StatefulWidget {
+  const MyCustomForm({Key? key}) : super(key: key);
+
+  @override
+  MyCustomFormState createState() {
+    return MyCustomFormState();
+  }
+}
+
+// Define a corresponding State class.
+// This class holds data related to the form.
+class MyCustomFormState extends State<MyCustomForm> {
+  // Create a global key that uniquely identifies the Form widget
+  // and allows validation of the form.
+  //
+  // Note: This is a `GlobalKey<FormState>`,
+  // not a GlobalKey<MyCustomFormState>.
+  String _name = 'mus';
+  String _password = 'mus';
+  String _date = 'mus';
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size; //get the size of the device ;
-    return Container(
-      padding: const EdgeInsets.all(8.0),
-      margin: const EdgeInsets.all(50.0),
-      child: Stack(
+    // Build a Form widget using the _formKey created above.
+    return Form(
+      key: _formKey,
+      child: Column(
         children: <Widget>[
-          Positioned(
-            top: 100,
-            left: 100,
-            child: Container(
-              width: 100,
-              height: 100,
-              color: Colors.red,
-            ),
-          ),
-          Positioned(
-            top: 200,
-            left: 200,
-            child: Container(
-              width: 100,
-              height: 100,
-              color: Color.fromARGB(255, 0, 224, 120),
-            ),
-          ),
-          Positioned(
-            child: Container(
-              width: 100,
-              height: 100,
-              color: Color.fromARGB(255, 62, 18, 68),
-            ),
-          ),
+          Text('mustapha hacke me')
+          // Add TextFormFields and ElevatedButton here.
         ],
       ),
     );
