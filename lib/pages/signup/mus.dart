@@ -19,8 +19,15 @@ class MyCustomFormState extends State<MyCustomForm> {
   // Note: This is a `GlobalKey<FormState>`,
   // not a GlobalKey<MyCustomFormState>.
   String _name = 'mus';
+  String _gender = 'mus';
+  String _faculty = 'mus';
+  String _country = 'mus';
+  String _level = 'mus';
+  String _spiciality = 'mus';
+  String _email = 'mus';
   String _password = 'mus';
-  String _date = 'mus';
+  String _phone = 'mus';
+  bool is_pass = false;
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -28,32 +35,242 @@ class MyCustomFormState extends State<MyCustomForm> {
     // Build a Form widget using the _formKey created above.
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.green,
         title: Text('right signup'),
       ),
-      body: Container(
-          child: Form(
-        key: _formKey,
-        child: Column(
-          children: <Widget>[
-            Container(
-              child: TextFormField(
-                validator:(value){
-                  if (value==null|| value.isEmpty) {
-                     return 'Please enter some text';
+      body: SingleChildScrollView(
+        child: Container(
+            child: Form(
+          key: _formKey,
+          child: Column(
+            children: <Widget>[
+              Container(
+                padding: EdgeInsets.all(20),
+                child: TextFormField(
+                    obscureText: is_pass,
+                    keyboardType: TextInputType.visiblePassword,
+                    maxLength: 20,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter some text';
+                      } else {
+                        _name = value;
+                        return null;
+                      }
+                    },
+                    onSaved: (value) {},
+                    decoration: InputDecoration(
+                        labelText: 'name',
+                        suffixIcon: Icon(Icons.login),
+                        icon: Icon(Icons.person))),
+              ),
+              Container(
+                padding: EdgeInsets.all(20),
+                child: TextFormField(
+                    keyboardType: TextInputType.visiblePassword,
+                    maxLength: 20,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter some text';
+                      } else {
+                        _name = value;
+                        return null;
+                      }
+                    },
+                    onSaved: (value) {},
+                    decoration: InputDecoration(
+                        labelText: 'Gender',
+                        suffixIcon: Icon(Icons.login),
+                        icon: Icon(Icons.person))),
+              ),
+              Container(
+                padding: EdgeInsets.all(20),
+                child: TextFormField(
+                    keyboardType: TextInputType.visiblePassword,
+                    maxLength: 20,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter some text';
+                      } else {
+                        _name = value;
+                        return null;
+                      }
+                    },
+                    onSaved: (value) {},
+                    decoration: InputDecoration(
+                        labelText: 'Faculty',
+                        suffixIcon: Icon(Icons.login),
+                        icon: Icon(Icons.person))),
+              ),
+              Container(
+                padding: EdgeInsets.all(20),
+                child: TextFormField(
+                    keyboardType: TextInputType.visiblePassword,
+                    maxLength: 20,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter some text';
+                      } else {
+                        _name = value;
+                        return null;
+                      }
+                    },
+                    onSaved: (value) {},
+                    decoration: InputDecoration(
+                        labelText: 'Country',
+                        suffixIcon: Icon(Icons.login),
+                        icon: Icon(Icons.person))),
+              ),
+              Container(
+                padding: EdgeInsets.all(20),
+                child: TextFormField(
+                    keyboardType: TextInputType.visiblePassword,
+                    maxLength: 20,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter some text';
+                      } else {
+                        _name = value;
+                        return null;
+                      }
+                    },
+                    onSaved: (value) {},
+                    decoration: InputDecoration(
+                        labelText: 'Level',
+                        suffixIcon: Icon(Icons.login),
+                        icon: Icon(Icons.person))),
+              ),
+              Container(
+                padding: EdgeInsets.all(20),
+                child: TextFormField(
+                    keyboardType: TextInputType.visiblePassword,
+                    maxLength: 20,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter some text';
+                      } else {
+                        return null;
+                      }
+                    },
+                    onSaved: (value) {},
+                    decoration: InputDecoration(
+                        labelText: 'Spiciality',
+                        suffixIcon: Icon(Icons.login),
+                        icon: Icon(Icons.person))),
+              ),
+              Container(
+                padding: EdgeInsets.all(20),
+                child: TextFormField(
+                    keyboardType: TextInputType.visiblePassword,
+                    maxLength: 20,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter some text';
+                      } else {
+                        return null;
+                      }
+                    },
+                    onSaved: (value) {},
+                    decoration: InputDecoration(
+                        labelText: 'Email',
+                        suffixIcon: Icon(Icons.login),
+                        icon: Icon(Icons.person))),
+              ),
+              Container(
+                padding: EdgeInsets.all(20),
+                child: TextFormField(
+                    keyboardType: TextInputType.visiblePassword,
+                    maxLength: 20,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter some text';
+                      } else {
+                        return null;
+                      }
+                    },
+                    onSaved: (value) {},
+                    decoration: InputDecoration(
+                        labelText: 'Password',
+                        suffixIcon: Icon(Icons.login),
+                        icon: Icon(Icons.person))),
+              ),
+              Container(
+                padding: EdgeInsets.all(20),
+                child: TextFormField(
+                    keyboardType: TextInputType.visiblePassword,
+                    maxLength: 20,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter some text';
+                      } else {
+                        return null;
+                      }
+                    },
+                    onSaved: (value) {},
+                    decoration: InputDecoration(
+                        labelText: 'Repeat Password',
+                        suffixIcon: Icon(Icons.login),
+                        icon: Icon(Icons.person))),
+              ),
+              Container(
+                padding: EdgeInsets.all(20),
+                child: TextFormField(
+                    keyboardType: TextInputType.visiblePassword,
+                    maxLength: 20,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter some text';
+                      } else {
+                        return null;
+                      }
+                    },
+                    onSaved: (value) {},
+                    decoration: InputDecoration(
+                        labelText: 'phone number',
+                        suffixIcon: Icon(Icons.login),
+                        icon: Icon(Icons.person))),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  // Validate returns true if the form is valid, or false otherwise.
+                  if (_formKey.currentState!.validate()) {
+                    // If the form is valid, display a snackbar. In the real world,
+                    // you'd often call a server or save the information in a database.
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('Processing Data')),
+                    );
+                    print(_name);
+                    print(_email);
+                    print(_gender);
+                    print(_faculty);
+                    print(_country);
+                    print(_level);
                   }
-                  else{
-                    return null
-                  }
-                } ,
-                  decoration: InputDecoration(
-                      labelText: 'name',
-                      suffixIcon: Icon(Icons.login),
-                      icon: Icon(Icons.person))),
-            )
-            // Add TextFormFields and ElevatedButton here.
-          ],
-        ),
-      )),
+                  print(_name);
+                  print(_email);
+                  print(_gender);
+                  print(_faculty);
+                  print(_country);
+                  print(_level);
+                  print(_spiciality);
+                  print(_email);
+                  print(_password);
+                  print(_phone);
+                },
+                child: const Text('signup mustapha'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  is_pass = !is_pass;
+                  print("ustapha");
+                },
+                child: const Text('login'),
+              ),
+              // Add TextFormFields and ElevatedButton here.
+            ],
+          ),
+        )),
+      ),
     );
   }
 }
