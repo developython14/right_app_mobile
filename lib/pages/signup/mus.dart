@@ -45,6 +45,9 @@ class MyCustomFormState extends State<MyCustomForm> {
           child: Column(
             children: <Widget>[
               Container(
+                child: Image.asset('assets/signup.jpg'),
+              ),
+              Container(
                 padding: EdgeInsets.all(20),
                 child: TextFormField(
                     obscureText: is_pass,
@@ -61,7 +64,15 @@ class MyCustomFormState extends State<MyCustomForm> {
                     onSaved: (value) {},
                     decoration: InputDecoration(
                         labelText: 'name',
-                        suffixIcon: Icon(Icons.login),
+                        suffixIcon: IconButton(
+                          icon: Icon(Icons.password),
+                          onPressed: () {
+                            setState(() {
+                              is_pass = !is_pass;
+                            });
+                            print("hada is pass$is_pass");
+                          },
+                        ),
                         icon: Icon(Icons.person))),
               ),
               Container(
@@ -73,7 +84,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                       if (value == null || value.isEmpty) {
                         return 'Please enter some text';
                       } else {
-                        _name = value;
+                        _gender = value;
                         return null;
                       }
                     },
@@ -92,7 +103,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                       if (value == null || value.isEmpty) {
                         return 'Please enter some text';
                       } else {
-                        _name = value;
+                        _faculty = value;
                         return null;
                       }
                     },
@@ -111,7 +122,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                       if (value == null || value.isEmpty) {
                         return 'Please enter some text';
                       } else {
-                        _name = value;
+                        _country = value;
                         return null;
                       }
                     },
@@ -130,7 +141,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                       if (value == null || value.isEmpty) {
                         return 'Please enter some text';
                       } else {
-                        _name = value;
+                        _level = value;
                         return null;
                       }
                     },
@@ -149,6 +160,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                       if (value == null || value.isEmpty) {
                         return 'Please enter some text';
                       } else {
+                        _spiciality = value;
                         return null;
                       }
                     },
@@ -167,6 +179,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                       if (value == null || value.isEmpty) {
                         return 'Please enter some text';
                       } else {
+                        _email = value;
                         return null;
                       }
                     },
@@ -185,6 +198,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                       if (value == null || value.isEmpty) {
                         return 'Please enter some text';
                       } else {
+                        _password = value;
                         return null;
                       }
                     },
@@ -203,6 +217,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                       if (value == null || value.isEmpty) {
                         return 'Please enter some text';
                       } else {
+                        _level = value;
                         return null;
                       }
                     },
@@ -221,6 +236,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                       if (value == null || value.isEmpty) {
                         return 'Please enter some text';
                       } else {
+                        _phone = value;
                         return null;
                       }
                     },
@@ -239,30 +255,26 @@ class MyCustomFormState extends State<MyCustomForm> {
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(content: Text('Processing Data')),
                     );
-                    print(_name);
-                    print(_email);
-                    print(_gender);
-                    print(_faculty);
-                    print(_country);
-                    print(_level);
+                    print('namme is $_name');
+                    print("email is $_email");
+                    print("gender is $_gender");
+                    print("faculty is $_faculty");
+                    print("country is $_country");
+                    print("level is $_level");
+                    print("spciality is $_spiciality");
+                    print("email is $_email");
+                    print("pass is $_password");
+                    print("phone is $_phone");
                   }
-                  print(_name);
-                  print(_email);
-                  print(_gender);
-                  print(_faculty);
-                  print(_country);
-                  print(_level);
-                  print(_spiciality);
-                  print(_email);
-                  print(_password);
-                  print(_phone);
                 },
-                child: const Text('signup mustapha'),
+                child: const Text('signup_mustapha'),
               ),
               ElevatedButton(
                 onPressed: () {
-                  is_pass = !is_pass;
-                  print("alllo ici c ets paris");
+                  setState(() {
+                    is_pass = !is_pass;
+                  });
+                  print("hada is pass$is_pass");
                 },
                 child: const Text('login'),
               ),
