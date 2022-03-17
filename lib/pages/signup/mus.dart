@@ -18,7 +18,7 @@ class MyCustomFormState extends State<MyCustomForm> {
   //
   // Note: This is a `GlobalKey<FormState>`,
   // not a GlobalKey<MyCustomFormState>.
-  String _name = N;
+  String _name = 'mus';
   String _password = 'mus';
   String _date = 'mus';
   final _formKey = GlobalKey<FormState>();
@@ -26,14 +26,34 @@ class MyCustomFormState extends State<MyCustomForm> {
   @override
   Widget build(BuildContext context) {
     // Build a Form widget using the _formKey created above.
-    return Form(
-      key: _formKey,
-      child: Column(
-        children: <Widget>[
-          Text('mustapha hacke me')
-          // Add TextFormFields and ElevatedButton here.
-        ],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('right signup'),
       ),
+      body: Container(
+          child: Form(
+        key: _formKey,
+        child: Column(
+          children: <Widget>[
+            Container(
+              child: TextFormField(
+                validator:(value){
+                  if (value==null|| value.isEmpty) {
+                     return 'Please enter some text';
+                  }
+                  else{
+                    return null
+                  }
+                } ,
+                  decoration: InputDecoration(
+                      labelText: 'name',
+                      suffixIcon: Icon(Icons.login),
+                      icon: Icon(Icons.person))),
+            )
+            // Add TextFormFields and ElevatedButton here.
+          ],
+        ),
+      )),
     );
   }
 }
