@@ -18,7 +18,7 @@ class MyCustomFormState extends State<MyCustomForm> {
   //
   // Note: This is a `GlobalKey<FormState>`,
   // not a GlobalKey<MyCustomFormState>.
-  String _name = 'mus';
+  String _name = N;
   String _password = 'mus';
   String _date = 'mus';
   final _formKey = GlobalKey<FormState>();
