@@ -8,11 +8,9 @@ import 'package:right_saudi/pages/signup/mus.dart';
 import 'package:right_saudi/start.dart';
 import 'package:right_saudi/pages/wait.dart';
 
-
-
 void main() {
   runApp(
-    MaterialApp(title: 'mustapha belkassem ', initialRoute: '/wait', routes: {
+      MaterialApp(title: 'mustapha belassem ', initialRoute: '/wait', routes: {
     '/': (context) => const welecome(),
     '/mus': (context) => const login_screen(),
     '/me': (context) => const drme(),
