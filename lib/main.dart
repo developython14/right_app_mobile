@@ -9,12 +9,13 @@ import 'package:right_saudi/start.dart';
 
 void main() {
   runApp(
-      MaterialApp(title: 'mustapha belkassem ', initialRoute: '/hack', routes: {
+      MaterialApp(title: 'mustapha belkassem ', initialRoute: '/wait', routes: {
     '/': (context) => const welecome(),
     '/mus': (context) => const login_screen(),
     '/me': (context) => const drme(),
     '/home': (context) => homescreen(),
     '/mustapha': (context) => MyCustomForm(),
     '/hack': (context) => toma(),
+    '/wait': (context) => toma(),
   }));
 }
