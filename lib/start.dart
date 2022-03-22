@@ -10,24 +10,29 @@ class toma extends StatelessWidget {
         child: IntroductionScreen(
       pages: [
         PageViewModel(
-            title: "hi mustapha",
-            body: 'toma hook your are big',
+            title: "in small time",
+            body: 'with strong quality',
+            decoration: PageDecoration(),
             image: Image.asset('assets/start_app/0.jpg')),
         PageViewModel(
-            title: "hi mustapha",
-            body: 'toma hook your are big',
+            title: "top experts",
+            body: 'texperts and professor from difffrent fields and domains',
+            decoration: PageDecoration(),
             image: Image.asset('assets/start_app/1.jpg')),
         PageViewModel(
-            title: "hi mustapha",
-            body: 'toma hook your are big',
+            title: "best  client services",
+            body: '24H/24 and 7days/7',
+            decoration: PageDecoration(),
             image: Image.asset('assets/start_app/2.jpg')),
         PageViewModel(
-            title: "hi mustapha",
-            body: 'toma hook your are big',
+            title: "low price with best quality",
+            body: 'compotition ake the price very low',
+            decoration: PageDecoration(),
             image: Image.asset('assets/start_app/3.jpg')),
         PageViewModel(
-            title: "hi mustapha",
-            body: 'toma hook your are big',
+            title: "money return",
+            body: 'if you are  not staisfaid we return your money',
+            decoration: PageDecoration(),
             image: Image.asset('assets/start_app/4.jpg'))
       ],
       done: const Text("Done", style: TextStyle(fontWeight: FontWeight.w600)),
@@ -37,6 +42,7 @@ class toma extends StatelessWidget {
       showNextButton: true,
       onDone: () {
         // When done button is press
+        Navigator.pushNamed(context, '/mus');
       },
     ));
   }
