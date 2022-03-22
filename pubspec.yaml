@@ -32,6 +32,7 @@ dependencies:
   flutter_svg: ^1.0.3
   carousel_slider: ^4.0.0
   getwidget: ^2.0.4
+  introduction_screen: ^2.0.1
 
 
 
