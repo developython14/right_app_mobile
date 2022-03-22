@@ -6,6 +6,7 @@ import 'package:right_saudi/pages/home/home.dart';
 import 'package:right_saudi/pages/signup/signup.dart';
 import 'package:right_saudi/pages/signup/mus.dart';
 import 'package:right_saudi/start.dart';
+import 'package:right_saudi/pages/wait.dart';
 
 void main() {
   runApp(
@@ -16,6 +17,6 @@ void main() {
     '/home': (context) => homescreen(),
     '/mustapha': (context) => MyCustomForm(),
     '/hack': (context) => toma(),
-    '/wait': (context) => toma(),
+    '/wait': (context) => wait(),
   }));
 }
