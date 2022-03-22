@@ -12,10 +12,23 @@ class toma extends StatelessWidget {
         PageViewModel(
             title: "hi mustapha",
             body: 'toma hook your are big',
-            image: Image.asset('assets/mustapha.jpg')),
-        PageViewModel(title: "hi mustapha", body: 'toma hook your are big'),
-        PageViewModel(title: "hi mustapha", body: 'toma hook your are big'),
-        PageViewModel(title: "hi mustapha", body: 'toma hook your are big'),
+            image: Image.asset('assets/start_app/0.jpg')),
+        PageViewModel(
+            title: "hi mustapha",
+            body: 'toma hook your are big',
+            image: Image.asset('assets/start_app/1.jpg')),
+        PageViewModel(
+            title: "hi mustapha",
+            body: 'toma hook your are big',
+            image: Image.asset('assets/start_app/2.jpg')),
+        PageViewModel(
+            title: "hi mustapha",
+            body: 'toma hook your are big',
+            image: Image.asset('assets/start_app/3.jpg')),
+        PageViewModel(
+            title: "hi mustapha",
+            body: 'toma hook your are big',
+            image: Image.asset('assets/start_app/4.jpg'))
       ],
       done: const Text("Done", style: TextStyle(fontWeight: FontWeight.w600)),
       skip: const Text("skip", style: TextStyle(fontWeight: FontWeight.w600)),
