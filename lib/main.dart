@@ -8,6 +8,8 @@ import 'package:right_saudi/pages/signup/mus.dart';
 import 'package:right_saudi/start.dart';
 import 'package:right_saudi/pages/wait.dart';
 
+
+
 void main() {
   runApp(
       MaterialApp(title: 'mustapha belassem ', initialRoute: '/wait', routes: {
