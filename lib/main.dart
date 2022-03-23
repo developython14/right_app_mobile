@@ -12,7 +12,7 @@ void main() {
   runApp(
       MaterialApp(title: 'mustapha belassem ', initialRoute: '/wait', routes: {
     '/': (context) => const welecome(),
-    '/mus': (context) => const login_screen(),
+    '/mus': (context) => login_screen(),
     '/me': (context) => const drme(),
     '/home': (context) => homescreen(),
     '/mustapha': (context) => MyCustomForm(),

@@ -3,8 +3,8 @@ import 'package:right_saudi/pages/login_screen/componant/bear_log_in_controller.
 import 'package:right_saudi/pages/login_screen/componant/input_helper.dart';
 import 'package:right_saudi/pages/login_screen/componant/signin_button.dart';
 import 'package:right_saudi/pages/login_screen/componant/tracking_text_input.dart';
-
-
+import 'package:flare_flutter/flare.dart';
+import 'package:flare_flutter/flare_actor.dart';
 
 class login_screen extends StatelessWidget {
   @override
@@ -143,4 +143,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-

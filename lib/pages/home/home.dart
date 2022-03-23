@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:right_saudi/pages/componant/c_home.dart';
-import 'package:right_saudi/pages/login_screen/componant/rounded_password.dart';
 import 'package:right_saudi/pages/componant/services_item.dart';
 import 'package:right_saudi/pages/componant/service_model.dart';
 import 'package:carousel_slider/carousel_slider.dart';
