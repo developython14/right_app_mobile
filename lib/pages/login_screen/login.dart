@@ -10,6 +10,18 @@ class login extends StatefulWidget {
 class _loginState extends State<login> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Stack(
+      children: [
+        Container(
+          color: Colors.black,
+        ),
+        Container(
+          color: Colors.white,
+        ),
+        Container(
+          color: Colors.green,
+        )
+      ],
+    );
   }
 }
