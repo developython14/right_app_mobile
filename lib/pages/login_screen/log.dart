@@ -101,7 +101,8 @@ class HomePage extends StatelessWidget {
                                   decoration: BoxDecoration(
                                       border: Border(
                                           bottom: BorderSide(
-                                              color: Colors.grey[100]))),
+                                              color: Color.fromARGB(
+                                                  255, 206, 155, 155)))),
                                   child: TextField(
                                     decoration: InputDecoration(
                                         border: InputBorder.none,

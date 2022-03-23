@@ -8,7 +8,6 @@ import 'package:right_saudi/pages/signup/mus.dart';
 import 'package:right_saudi/start.dart';
 import 'package:right_saudi/pages/wait.dart';
 import 'package:right_saudi/pages/login_screen/log.dart';
- 
 
 void main() {
   runApp(
