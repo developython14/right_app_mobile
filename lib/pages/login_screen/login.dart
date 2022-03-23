@@ -57,8 +57,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     // Add one stop for each color. Stops should increase from 0 to 1
                     stops: [0.0, 1.0],
                     colors: [
-                      Color(0xff00BFA5),
-                      Color(0xff64FFDA),
+                      Color.fromARGB(255, 148, 172, 83),
+                      Color.fromARGB(255, 255, 239, 100),
                     ],
                   ),
                 ),
@@ -127,7 +127,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                 onPressed: () {
                                   _bear_log_inController.submitPassword();
                                 },
-                              )
+                              ),
+                              Container(
+                                child: Column(children: [
+                                  Text("mustapha"),
+                                  Text("belkassem")
+                                ]),
+                              ),
                             ],
                           ),
                         ),
