@@ -11,7 +11,7 @@ class wait extends StatefulWidget {
 class _waitState extends State<wait> {
   void data() async {
     await Future.delayed(Duration(seconds: 5));
-    Navigator.pushNamed(context, '/hack');
+    Navigator.pushNamed(context, '/intro');
   }
 
   @override
