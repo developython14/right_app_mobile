@@ -10,15 +10,14 @@ class wait extends StatefulWidget {
 
 class _waitState extends State<wait> {
   void data() async {
-    await Future.delayed(Duration(seconds: 10));
+    await Future.delayed(Duration(seconds: 5));
     Navigator.pushNamed(context, '/hack');
   }
 
   @override
   void initState() {
-    print('hi be!!!!');
     super.initState();
-    print('hi be!!!!');
+    data();
   }
 
   @override
@@ -30,7 +29,8 @@ class _waitState extends State<wait> {
       itemBuilder: (BuildContext context, int index) {
         return DecoratedBox(
           decoration: BoxDecoration(
-            color: index.isEven ? Colors.red : Colors.green,
+            color:
+                index.isEven ? Colors.red : Color.fromARGB(255, 229, 255, 81),
           ),
         );
       },
