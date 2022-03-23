@@ -4,16 +4,16 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 class wait extends StatelessWidget {
   const wait({Key? key}) : super(key: key);
 
-  void get_data () {
-    await Future.delayed(Duration(seconds: 2));
+  void get_data async () {
+    await Future.delayed(Duration(seconds:7 ));
     Navigator.pushNamed(context, '/hack');
-  }
+  };
 
 
   @override
   void initState() {
   super.initState();
-  get_data ();
+  await get_data ();
   }
   
 
