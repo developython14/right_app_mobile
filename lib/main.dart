@@ -10,7 +10,7 @@ import 'package:right_saudi/pages/wait.dart';
 
 void main() {
   runApp(
-      MaterialApp(title: 'mustapha belkassem ', initialRoute: '/mus', routes: {
+      MaterialApp(title: 'mustapha belkassem ', initialRoute: '/wait', routes: {
     '/': (context) => const welecome(),
     '/mus': (context) => login(),
     '/me': (context) => const drme(),
