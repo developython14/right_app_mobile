@@ -35,7 +35,6 @@ dependencies:
   introduction_screen: ^2.0.1
   flutter_spinkit: ^5.1.0
   flare_flutter: ^3.0.2
-  cupertino_icons: ^1.0.2
   google_fonts: ^2.1.0
   simple_animations: ^4.0.1
   cached_network_image: ^3.1.0

@@ -14,32 +14,8 @@ class _loginState extends State<login> {
       body: Container(
         color: Color.fromARGB(255, 255, 255, 255),
         padding: EdgeInsets.all(50.0),
-        child: Stack(
-          children: [
-            Container(
-              child: Image.asset("assets/start_app/0.jpg"),
-            ),
-            Positioned(
-              top: 250,
-              child: Text('Login',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 26,
-                  )),
-            ),
-            Positioned(
-              width:200,
-              top:350,
-              child: TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: 'Enter your email',
-                ),
-              ),
-            )
-          ],
-        ),
+        child: Column(
+            children: [Text('mustapha belkassem'), Text("i'm a good one ")]),
       ),
     );
   }
