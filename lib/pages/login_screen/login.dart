@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:getwidget/getwidget.dart';
 
 class login extends StatefulWidget {
   const login({Key? key}) : super(key: key);
@@ -58,6 +59,27 @@ class _loginState extends State<login> {
           ),
           SizedBox(height: 25),
           Text("or login using "),
+          GFButton(
+            onPressed: () {},
+            text: "primary",
+            icon: Icon(Icons.facebook),
+            type: GFButtonType.solid,
+            fullWidthButton: true,
+          ),
+          GFButton(
+            onPressed: () {},
+            text: "success",
+            icon: Icon(Icons.facebook),
+            type: GFButtonType.solid,
+            fullWidthButton: true,
+          ),
+          GFButton(
+            onPressed: () {},
+            text: "danger",
+            icon: Icon(Icons.facebook),
+            type: GFButtonType.solid,
+            fullWidthButton: true,
+          ),
         ]),
       ),
     );
